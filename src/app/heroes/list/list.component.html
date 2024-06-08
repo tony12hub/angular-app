@@ -1,0 +1,21 @@
+<p>list works!</p>
+
+<div *ngIf="heroeborrado; else vacio">
+    <h3>Heroe borrado: <span>{{heroeborrado}}</span></h3>
+</div>
+<ng-template #vacio>
+    <div>
+        <h3>no ha borrado nada</h3>
+    </div>
+</ng-template>
+
+<dl>
+    <button class="btn btn-primary" (click) = "borrar()">Eliminar</button>
+    <button class="btn btn-primary mx-2" (click) = "reset()">Reset</button>
+</dl>
+
+
+<ul class="list-group mt-2">
+    <li *ngFor="let list of heroes" class="list-group-item">{{list}}</li>
+</ul>
+

@@ -1,0 +1,17 @@
+<div class="container">
+    <h1 class="div">Hola soy goku</h1>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <app-dbz-list
+                [Titulo]="nameList"
+                [ListaPersonajes]="personajes"
+                (onDeleteId)="onDeleteCharacter($event)"
+            >
+            </app-dbz-list>
+        </div>
+        <div class="col">
+            <app-add-character (OnNewCharacter)="agregarPersonaje($event)"></app-add-character>
+        </div>
+    </div>
+</div>

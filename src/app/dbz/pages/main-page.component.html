@@ -1,0 +1,20 @@
+<div>dbz cmain page</div>
+<hr>
+<div class="row">
+    <div class="col">
+        <app-dbz-listado
+            [lista] = "characters"
+            [titulo] = "tituloLista"
+            (onDelete)="onDelete($event)"
+            >
+        </app-dbz-listado>
+    </div>
+
+    <div class="col">
+        <app-formulario
+            (onNewCharacter)="servico.obtenerPersonaje($event)"
+            >
+        </app-formulario>
+        
+    </div>
+</div>

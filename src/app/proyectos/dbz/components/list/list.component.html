@@ -1,0 +1,13 @@
+<h4>{{Titulo}}</h4>
+<ul class="list-group">
+    <li *ngFor="let item of ListaPersonajes; let i = index; let isEven = even"
+        class="list-group-item  d-flex justify-content-between align-items-center"
+        [ngClass]="{
+            'list-group-item-primary': isEven
+        }">
+        <div>
+            <span>{{i+1}}. </span>{{item.name}} - {{item.power}}
+        </div>
+        <button class="btn btn-danger" (click)="onDeleteCharacter(item.id)">X</button>
+    </li>
+</ul>

@@ -1,0 +1,18 @@
+<h4>{{titulo}}</h4>
+<ul class="list-group">
+    <li
+        *ngFor="let item of lista; let i = index; let inLast = last"
+        class="list-group-item d-flex justify-content-between align-items-center"
+        [ngClass]="{
+            'list-group-item-dark':inLast
+        }">
+        <div>
+            {{item.name}} - {{item.power}}
+        </div>
+        <div>
+            <button class="btn btn-warning mx-2" (click)="modificar(item.id)">&</button>
+            <button class="btn btn-danger" (click)="onDeletePersoanje(item.id)">X</button>
+        </div>
+        
+    </li>
+</ul>
